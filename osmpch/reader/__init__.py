@@ -1,1 +1,1 @@
-from . import read_xml
+from .xml import read_xml

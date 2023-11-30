@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 click = "*"
+sqlalchemy = "*"
+iso8601 = "*"
+requests = "*"
+humanize = "*"
 
 [dev-packages]
 

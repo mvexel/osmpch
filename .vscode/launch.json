@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: osmpch",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/osmpch/cli.py",
+            "console": "integratedTerminal",
+            "args": [
+                "process",
+                "/Volumes/treinen/osm/changesets-latest.osm.bz2",
+                "--writer",
+                "sqlite"
+            ]
+        }
+    ]
+}
