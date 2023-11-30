@@ -1,6 +1,5 @@
-from sqlalchemy import Column, DateTime, Integer, Float, String, Boolean, JSON
+from sqlalchemy import JSON, Boolean, Column, DateTime, Float, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-import json
 
 Base = declarative_base()
 
@@ -14,6 +13,7 @@ Base = declarative_base()
 # <tag k="locale" v="en-US"/>
 # </changeset>
 # </osm>
+
 
 class Changeset(Base):
     __tablename__ = "changesets"

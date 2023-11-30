@@ -1,1 +1,1 @@
-from .osm import get_latest_osm_changeset_id
+from .osm import get_latest_osm_changeset_id  # noqa: F401

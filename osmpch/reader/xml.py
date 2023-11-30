@@ -1,6 +1,6 @@
-from datetime import datetime
-import xml.etree.ElementTree as ET
 import bz2
+import xml.etree.ElementTree as ET
+
 from iso8601 import parse_date
 
 from osmpch.models import Changeset
@@ -46,14 +46,13 @@ def read_xml(file_path):
                 changeset_attributes["created_at"] = parse_date(
                     changeset_attributes["created_at"]
                 )
-                changeset_attributes["closed_at"] = parse_date(
-                    changeset_attributes["closed_at"]
-                )
+                if "closed_at" in changeset_attributes:
+                    changeset_attributes["closed_at"] = parse_date(
+                        changeset_attributes["closed_at"]
+                    )
 
                 # convert open attribute to boolean
-                changeset_attributes["open"] = (
-                    changeset_attributes["open"] == "true"
-                )
+                changeset_attributes["open"] = changeset_attributes["open"] == "true"
 
                 changeset = Changeset(**changeset_attributes)
                 yield changeset
