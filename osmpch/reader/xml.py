@@ -1,6 +1,6 @@
 import bz2
-import xml.etree.ElementTree as ET
 
+from defusedxml import ElementTree as ET
 from iso8601 import parse_date
 
 from osmpch.models import Changeset

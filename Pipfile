@@ -9,6 +9,7 @@ sqlalchemy = "*"
 iso8601 = "*"
 requests = "*"
 humanize = "*"
+defusedxml = "*"
 
 [dev-packages]
 
